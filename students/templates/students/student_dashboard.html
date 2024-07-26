@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ student.student_name }}</h1>
+    <h2>Your Details:</h2>
+    <ul>
+        <li>Phone Number: {{ student.student_phone_number }}</li>
+        <li>Class: {{ student.class_name }}</li>
+        <li>Class Teacher: {{ student.class_teacher_name }}</li>
+        <li>Parent Name: {{ student.parent_name }}</li>
+        <li>Parent Phone: {{ student.parent_phone_number }}</li>
+    </ul>
+    <h2>Your Grades:</h2>
+    <ul>
+        <li>Chemistry: {{ student.chemistry }}</li>
+        <li>Physics: {{ student.physics }}</li>
+        <li>Math: {{ student.math }}</li>
+    </ul>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
